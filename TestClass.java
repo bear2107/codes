@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
- 
+ //program to find the no of smaller elements to the right of array using inversion pairs
  
 class TestClass {
     public static void main(String args[] ) throws Exception {
