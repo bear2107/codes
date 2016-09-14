@@ -1,7 +1,7 @@
 import java.io.*;
 class fibo
 {
-
+//program to find fibonacci using matrix exponentiation
 public static void main(String args[])throws IOException
 {
 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
