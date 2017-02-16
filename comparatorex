@@ -1,0 +1,39 @@
+public class Solution {
+	// DO NOT MODIFY THE LIST
+	public String largestNumber(final List<Integer> a) {
+	    StringBuffer str=new StringBuffer();
+	    Node num[];
+	    
+	    num=new Node[a.size()];
+	    for(int i=0;i<a.size();i++)
+	    num[i]=new Node(a.get(i));
+	    
+	    Arrays.sort(num);
+	    for(int i=0;i<num.length;i++)
+	    {
+	        if(num[i].number==0&&str.length()!=0)
+	        continue;
+	        else
+	        str.append(num[i].number);
+	    }
+	 return str.toString();  
+	}
+	
+	
+	
+}
+
+class Node implements Comparable<Node>
+{
+    int number;
+    public Node(int number)
+    {
+        this.number=number;
+    }
+    public int compareTo(Node o)
+    {
+        String first=String.valueOf(this.number)+String.valueOf(o.number);
+        String second=String.valueOf(o.number)+String.valueOf(this.number);
+        return second.compareTo(first);
+    }
+}
